@@ -1,0 +1,5 @@
+docker run -p 8888:8888 --env-file=.env  -v jupytervolme:/contrans2024 ethanwang1207/jupyterlab_dev
+
+docker run -p 8888:8888 --env-file=.env -v ./:/contrans2024 ethanwang1207/jupyterlab_dev
+
+docker run -p 5432:5432 --env-file=.env -v postgresdata:/var/lib/postgresql/data postgres

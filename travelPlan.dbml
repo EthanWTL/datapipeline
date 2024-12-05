@@ -1,0 +1,99 @@
+Project TravelPlan {
+  database_type: 'PostgreSQL'
+  Note: '''
+    Database for the travel plan
+    **markdown content here**
+  '''
+}
+Table hotels as h {
+    business_id varchar [pk]
+    name varchar
+    adress varchar
+    latitude float
+    longitude float
+    stars float
+    price varchar
+    quality varchar
+    location varchar
+    service varchar
+    safety varchar
+}
+Table hotels_reviews as hr {
+    review_id varchar [pk]
+    user_id varchar
+    business_id varchar [pk]
+    stars float
+    useful int
+    funny int
+    cool int
+    text varchar
+    date datetime
+}
+
+Table restaurants as r {
+    business_id varchar [pk]
+    name varchar
+    adress varchar
+    latitude float
+    longitude float
+    stars float
+    good_for_meal varchar
+    price varchar
+    restaurant_type_1 varchar
+    restaurant_type_2 varchar
+    cuisine_1 varchar
+    cuisine_2 varchar
+    perks varchar
+    flavor varchar
+    freshness varchar
+    healthy varchar
+    service varchar
+    enviornment varchar
+    value varchar
+}
+
+Table restaurants_reviews as rr {
+    review_id varchar [pk]
+    user_id varchar
+    business_id varchar [pk]
+    stars float
+    useful int
+    funny int
+    cool int
+    text varchar
+    date datetime
+}
+
+Table attractions as a {
+    business_id varchar [pk]
+    name varchar
+    adress varchar
+    latitude float
+    longitude float
+    stars float
+    price varchar
+    attraction_type varchar
+    perks varchar
+    family_oriented varchar
+    history_oriented varchar 
+    activity_oriented varchar
+    nature_oriented varchar
+    food_oriented varchar
+    shopping_oriented varchar
+}
+
+Table attractions_reviews as ar {
+    review_id varchar [pk]
+    user_id varchar
+    business_id varchar [pk]
+    stars float
+    useful int
+    funny int
+    cool int
+    text varchar
+    date datetime
+}
+
+Ref: h.business_id < hr.business_id
+Ref: a.business_id < ar.business_id
+Ref: r.business_id < rr.business_id
