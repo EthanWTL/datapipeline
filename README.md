@@ -1,6 +1,6 @@
 # contrans2024
 
 Hi there :smiley: ,
-Here is the repo for congress transparency project for Data Engineering 2024.
+Here is the repo for the data pipeline for Data Engineering Class.
 
-Link to Docker Img: https://hub.docker.com/repository/docker/ethanwang1207/jupyterlab_dev
+Link to docker img: https://hub.docker.com/r/jkropko/dashcontainer?uuid=e7709b9e-bdea-41c3-a474-7465f1740b4b%0A
